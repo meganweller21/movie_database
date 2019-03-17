@@ -9,5 +9,5 @@ export type MovieDetails = {
   title: string,
   vote_average: number,
   vote_count: number,
-  genre_ids: Array<string>,
+  genre_ids: Array<number>,
 };
