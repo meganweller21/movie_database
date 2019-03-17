@@ -38,7 +38,7 @@ const MovieResult = (props: MovieResultProps) => {
   return (
     <MovieCard>
       {props.movie.poster_path !== null && (
-        <img src={`https://image.tmdb.org/t/p/w500/${props.movie.poster_path}`} />
+        <img src={`https://image.tmdb.org/t/p/w500/${props.movie.poster_path}`} alt="img" />
       )}
       <MovieDetail>
         <div className="title"> {props.movie.title}</div>

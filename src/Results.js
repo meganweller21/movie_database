@@ -4,7 +4,6 @@ import MovieResult from './MovieResult';
 
 export type ResultsProps = {
   results: Array<MovieDetails>,
-  page: number,
 };
 
 type ResultsState = {
@@ -40,7 +39,6 @@ class Results extends Component<ResultsProps, ResultsState> {
             ))}
           </div>
         )}
-        {this.state.results.length === 0 && this.props.page === 1 && <div>No search results</div>}
       </div>
     );
   }

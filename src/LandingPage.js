@@ -23,6 +23,10 @@ const LandingPageHeader = styled('div')`
   ul {
     padding: 0px;
   }
+
+  div {
+    padding-top: 5px;
+  }
 `;
 
 const SearchField = styled('div')`
@@ -133,6 +137,7 @@ class LandingPage extends Component<LandingPageProps, LandingPageState> {
             />
           )}
           {this.state.results.length > 0 && <div> {this.state.totalResults} Results </div>}
+          {this.state.results.length === 0 && this.state.page === 1 && <div>No search results</div>}
         </LandingPageHeader>
         <div className="MovieResultsContainer">
           {this.state.results && (
