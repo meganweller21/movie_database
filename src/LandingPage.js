@@ -109,6 +109,15 @@ class LandingPage extends Component<LandingPageProps, LandingPageState> {
     if (movieQuery !== '' && movieQuery !== null) {
       this.getMovieFromDatabase(movieQuery);
     }
+
+    if (movieQuery === '') {
+      this.setState({
+        page: 0,
+        results: [],
+        totalPages: 0,
+        totalResults: 0,
+      });
+    }
   };
 
   handlePageChange = (page: Object) => {
